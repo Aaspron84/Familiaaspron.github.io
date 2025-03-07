@@ -7,25 +7,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            color: white; /* Color del texto */
-            background-image: url('Fondo.PNG'); /* URL de la imagen de fondo */
-            background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            background-attachment: fixed; /* Fija el fondo */
+            color: white;
+            background-image: url('Fondo.PNG');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
         }
 
         h1 {
-            font-size: 48px;
-            color: #ffffff; /* Color del título */
+            font-size: 2.5rem;
+            color: #ffffff;
             margin-top: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejorar la legibilidad */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .escudo {
-            width: 300px;
+            width: 80%;
+            max-width: 300px;
             height: auto;
             margin-top: 30px;
             border: 5px solid #2c3e50;
@@ -33,37 +34,38 @@
         }
 
         .descripcion {
-            font-size: 18px;
+            font-size: 1rem;
             margin-top: 40px;
             line-height: 1.6;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
             text-align: justify;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
+            box-sizing: border-box;
         }
 
         footer {
             font-size: 14px;
             color: #ffffff;
             margin-top: 50px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el pie de página */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 10px;
         }
 
         .menu {
             margin-top: 20px;
             margin-bottom: 40px;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el menú */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 10px;
         }
 
         .menu a {
             text-decoration: none;
             color: #ffffff;
-            font-size: 18px;
+            font-size: 1.2rem;
             margin: 0 15px;
         }
 
@@ -82,6 +84,39 @@
             border: none;
             border-radius: 10px;
         }
+
+        /* Estilos para móviles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .escudo {
+                width: 100%;
+                border: none;
+            }
+
+            .descripcion {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu a {
+                margin: 5px 0;
+                font-size: 1rem;
+            }
+
+            iframe {
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>          
@@ -90,33 +125,4 @@
     <div class="menu">
         <a href="index.html">INTRO</a>
         <a href="#">HOME</a>
-        <a href="#">BLASÓN ASPRÓN</a>
-        <a href="#">ARBOL</a>
-    </div>
-
-    <h1>ESCUDO DE ARMAS FAMILIA ASPRÓN</h1>
-
-    <!-- Imagen del escudo de armas de la familia -->  
-    <img class="escudo" src="https://i.imgur.com/rpqmvrm.jpg" alt="Escudo de Armas Familia Asprón">
-
-    <!-- Descripción de la familia -->
-    <div class="descripcion">
-        <h1 class="titulo">La Casa de Asprón: Una Historia de Honor y Legado</h1>
-        <p>
-            En los verdes valles de <strong>Asturias</strong>, donde las montañas besan el cielo y el mar Cantábrico susurra historias de antiguos linajes, nació en 1870 don <strong>Antonio Asprón Pilar</strong>, hijo de <strong>Manuel Asprón Rubio</strong> y <strong>Francisca Pilar</strong>, ambos españoles de pura cepa. La familia <strong>Asprón</strong>, cuyas raíces se hunden en la tierra asturiana, era conocida por su fortaleza y dedicación al trabajo, valores que forjaron el carácter de <strong>Antonio</strong> desde su más tierna infancia.
-        </p>
-        <!-- Resto del texto -->
-    </div>
-
-    <!-- Video centrado -->
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-    </div>
-
-    <!-- Crédito -->
-    <footer>
-        Creado por Antonio Asprón Vera
-    </footer>
-
-</body>
-</html>
+        <a href="#">BLASÓN ASPRÓN
