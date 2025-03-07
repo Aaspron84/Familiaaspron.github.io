@@ -19,7 +19,7 @@
         /* Estilos para el botón "ENTRAR" */
         #enter-btn {
             position: absolute;
-            top: 50%;
+            top: 50%;  /* Se mantiene centrado */
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 20px 40px;
@@ -30,7 +30,6 @@
             cursor: pointer;
             border-radius: 10px;
             z-index: 1;
-            display: inline-block;
         }
 
         #enter-btn:hover {
@@ -40,7 +39,7 @@
         /* Estilos para el texto que aparece sobre el video */
         h1 {
             position: absolute;
-            top: 20%;  /* Cambiado para que no tape el video */
+            top: 10%;  /* Cambiado para que no tape el video */
             left: 50%;
             transform: translateX(-50%);
             font-size: 48px;
@@ -56,7 +55,6 @@
             color: white;
         }
 
-        /* Aquí irían más estilos para la estructura del árbol, ajusta según lo que necesites */
         #family-tree h2 {
             font-size: 36px;
             margin-bottom: 20px;
@@ -66,8 +64,8 @@
 <body>
 
     <!-- Video de fondo que se reproduce automáticamente y con sonido -->
-    <video id="bg-video" autoplay loop>
-        <source src="https://github.com/Aaspron84/Familiaaspron.github.io/raw/main/video%20entrada%20aspron.mp4" type="video/mp4">
+    <video id="bg-video" autoplay loop muted>
+        <source src="https://github.com/Aaspron84/Familiaaspron.github.io/blob/main/video%20entrada%20aspron.mp4" type="video/mp4">
         Tu navegador no soporta el video.
     </video>
 
@@ -80,9 +78,8 @@
     <!-- Estructura del árbol genealógico (ocultada inicialmente) -->
     <div id="family-tree">
         <h2>Árbol Genealógico Familia Asprón</h2>
-        <!-- Aquí iría la estructura del árbol -->
         <p>Este es el árbol genealógico de nuestra familia...</p>
-        <!-- Puedes agregar la estructura jerárquica aquí -->
+        <!-- Aquí iría la estructura jerárquica del árbol -->
     </div>
 
     <script>
@@ -93,10 +90,10 @@
             document.getElementById("family-tree").style.display = "block"; // Muestra el árbol genealógico
         }
 
-        // Activar el sonido automáticamente al cargar la página
+        // Activar el sonido automáticamente al cargar la página (en algunos navegadores)
         window.onload = function() {
             var video = document.getElementById("bg-video");
-            video.muted = false;  // Asegura que el sonido esté activado
+            video.muted = false;  // Desactiva el mute para activar el sonido
         }
     </script>
 
