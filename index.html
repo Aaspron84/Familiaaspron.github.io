@@ -30,10 +30,22 @@
             cursor: pointer;
             border-radius: 10px;
             z-index: 1;
+            display: inline-block;
         }
 
         #enter-btn:hover {
             background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estilos para el texto que aparece sobre el video */
+        h1 {
+            position: absolute;
+            top: 20%;  /* Cambiado para que no tape el video */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 48px;
+            color: white;
+            z-index: 2;
         }
 
         /* Estructura del árbol genealógico (se ocultará inicialmente) */
@@ -53,11 +65,14 @@
 </head>
 <body>
 
-    <!-- Video de fondo que se reproduce automáticamente -->
-    <video id="bg-video" autoplay muted loop>
-        <source src="https://github.com/Aaspron84/Familiaaspron.github.io/blob/main/video%20entrada%20aspron.mp4" type="video/mp4">
+    <!-- Video de fondo que se reproduce automáticamente y con sonido -->
+    <video id="bg-video" autoplay loop>
+        <source src="https://github.com/Aaspron84/Familiaaspron.github.io/raw/main/video%20entrada%20aspron.mp4" type="video/mp4">
         Tu navegador no soporta el video.
     </video>
+
+    <!-- Título de la página -->
+    <h1>Árbol Genealógico Familia Asprón</h1>
 
     <!-- Botón "ENTRAR" -->
     <button id="enter-btn" onclick="entrar()">ENTRAR</button>
@@ -76,6 +91,12 @@
             document.getElementById("bg-video").style.display = "none";  // Oculta el video
             document.getElementById("enter-btn").style.display = "none"; // Oculta el botón "ENTRAR"
             document.getElementById("family-tree").style.display = "block"; // Muestra el árbol genealógico
+        }
+
+        // Activar el sonido automáticamente al cargar la página
+        window.onload = function() {
+            var video = document.getElementById("bg-video");
+            video.muted = false;  // Asegura que el sonido esté activado
         }
     </script>
 
