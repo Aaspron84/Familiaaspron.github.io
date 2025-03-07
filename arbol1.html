@@ -23,17 +23,25 @@
         .menu {
             margin-top: 20px;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px; /* Espacio entre los botones */
         }
 
         .menu a {
             text-decoration: none;
             color: #2c3e50;
-            font-size: 18px;
-            margin: 0 15px;
+            font-size: 16px; /* Tamaño de fuente reducido */
+            padding: 8px 16px; /* Espaciado interno reducido */
+            border: 2px solid #2c3e50;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .menu a:hover {
-            color: #e74c3c;
+            background-color: #2c3e50;
+            color: #ffffff;
         }
 
         .arbol-img {
@@ -54,9 +62,14 @@
 </head>
 <body>
 
-    <!-- Menú de navegación -->
+    <!-- Menú de navegación reducido -->
     <div class="menu">
         <a href="pagina-principal.html">HOME</a>
+        <a href="pedro.html">PEDRO</a>
+        <a href="antonio.html">ANTONIO</a>
+        <a href="chole.html">MA SOLEDAD</a>
+        <a href="polo.html">LEOPOLDO</a>
+        <a href="david.html">DAVID APOLINAR</a>
     </div>
 
     <!-- Título principal -->
