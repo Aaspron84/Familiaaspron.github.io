@@ -16,19 +16,38 @@
             z-index: -1;
         }
 
-        /* Resto de estilos para la página */
-        body {
-            font-family: Arial, sans-serif;
+        /* Estilos para el botón "ENTRAR" */
+        #enter-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
-            margin: 0;
-            padding: 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            z-index: 1;
         }
 
-        h1 {
+        #enter-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Estructura del árbol genealógico (se ocultará inicialmente) */
+        #family-tree {
+            display: none;
             text-align: center;
-            padding-top: 200px;
-            font-size: 48px;
+            margin-top: 50px;
             color: white;
+        }
+
+        /* Aquí irían más estilos para la estructura del árbol, ajusta según lo que necesites */
+        #family-tree h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -40,10 +59,25 @@
         Tu navegador no soporta el video.
     </video>
 
-    <!-- Título de la página -->
-    <h1>Árbol Genealógico Familia Asprón</h1>
+    <!-- Botón "ENTRAR" -->
+    <button id="enter-btn" onclick="entrar()">ENTRAR</button>
 
-    <!-- Aquí puede ir el resto del contenido de la página -->
+    <!-- Estructura del árbol genealógico (ocultada inicialmente) -->
+    <div id="family-tree">
+        <h2>Árbol Genealógico Familia Asprón</h2>
+        <!-- Aquí iría la estructura del árbol -->
+        <p>Este es el árbol genealógico de nuestra familia...</p>
+        <!-- Puedes agregar la estructura jerárquica aquí -->
+    </div>
+
+    <script>
+        // Función que oculta el video y muestra el árbol genealógico al hacer clic en el botón "ENTRAR"
+        function entrar() {
+            document.getElementById("bg-video").style.display = "none";  // Oculta el video
+            document.getElementById("enter-btn").style.display = "none"; // Oculta el botón "ENTRAR"
+            document.getElementById("family-tree").style.display = "block"; // Muestra el árbol genealógico
+        }
+    </script>
 
 </body>
 </html>
