@@ -1,0 +1,40 @@
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #f5efe6;
+    color: #5a4634;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #8b6f47;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    border-bottom: 5px solid #5a4634;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #8b6f47;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#tree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Estilo para los nodos del árbol */
+.node {
+  
