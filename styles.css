@@ -6,6 +6,14 @@ body {
     margin: 0;
     padding: 0;
 }
+.titulo {
+  font-size: 36px; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negritas */
+  text-decoration: underline; /* Subrayado */
+  text-align: center; /* Centra el texto */
+  color: #000; /* Color del texto, puedes cambiarlo si lo prefieres */
+}
+
 
 header {
     background-color: #8b6f47;
