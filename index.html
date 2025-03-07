@@ -4,19 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Árbol Genealógico Familia Asprón</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <style>
+        /* Estilos para el video de fondo */
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #bg-video {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Estilos para el contenido encima del video */
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            z-index: 1;
+        }
+
+        /* Botón para activar audio */
+        #unmute-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Árbol Genealógico Familia Asprón</h1>
-        <p>Bienvenido al árbol genealógico de nuestra familia.</p>
-    </header>
-    <main>
-        <div id="tree"></div>
-    </main>
-    <footer>
-        <p>© 2025 Familia Asprón - Historia y legado</p>
-    </footer>
+
+    <!-- Contenedor del video -->
+    <div id="video-container">
+        <iframe id="bg-video" src="https://www.youtube.com/embed/6GDCFa4Ikm0?autoplay=1&mute=1&loop=1&playlist=6GDCFa4Ikm0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Contenido sobre el video -->
+    <div id="content">
+        <h1>Bienvenidos al Árbol Genealógico Familia Asprón</h1>
+    </div>
+
+    <!-- Botón para activar el audio -->
+    <button id="unmute-btn">🔊 Activar sonido</button>
+
+    <script>
+        document.getElementById("unmute-btn").addEventListener("click", function() {
+            var iframe = document.getElementById("bg-video");
+            iframe.src = "https://www.youtube.com/embed/6GDCFa4Ikm0?autoplay=1&loop=1&playlist=6GDCFa4Ikm0";
+            this.style.display = "none"; // Oculta el botón después de activarlo
+        });
+    </script>
+
 </body>
 </html>
