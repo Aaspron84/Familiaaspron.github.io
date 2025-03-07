@@ -16,38 +16,38 @@
             z-index: -1;
         }
 
-        /* Estilos para el botón "ENTRAR" */
-        #enter-btn {
-            position: absolute;
-            top: 50%;  /* Se mantiene centrado */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px 40px;
-            font-size: 24px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px;
-            z-index: 1;
-        }
-
-        #enter-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        /* Estilos para el texto que aparece sobre el video */
+        /* Estilos para el texto "Árbol Genealógico Familia Asprón" */
         h1 {
             position: absolute;
-            top: 10%;  /* Cambiado para que no tape el video */
+            top: 10%;  /* Posicionamiento ajustado */
             left: 50%;
             transform: translateX(-50%);
             font-size: 48px;
             color: white;
-            z-index: 2;
+            z-index: 1;  /* Asegura que esté por encima del video */
         }
 
-        /* Estructura del árbol genealógico (se ocultará inicialmente) */
+        /* Estilos para el botón "ENTRAR" */
+        #enter-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.6);  /* Transparencia */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            z-index: 2; /* Asegura que esté por encima del video y el texto */
+        }
+
+        #enter-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);  /* Efecto hover */
+        }
+
+        /* Estructura del árbol genealógico (ocultada inicialmente) */
         #family-tree {
             display: none;
             text-align: center;
@@ -65,7 +65,7 @@
 
     <!-- Video de fondo que se reproduce automáticamente y con sonido -->
     <video id="bg-video" autoplay loop muted>
-        <source src="https://github.com/Aaspron84/Familiaaspron.github.io/blob/main/video%20entrada%20aspron.mp4" type="video/mp4">
+        <source src="https://github.com/Aaspron84/Familiaaspron.github.io/raw/main/video%20entrada%20aspron.mp4" type="video/mp4">
         Tu navegador no soporta el video.
     </video>
 
