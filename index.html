@@ -19,6 +19,7 @@
         #bg-video {
             width: 100vw;
             height: 100vh;
+            object-fit: cover;
         }
 
         /* Estilos para el contenido encima del video */
@@ -46,32 +47,4 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Contenedor del video -->
-    <div id="video-container">
-        <iframe id="bg-video" src="https://www.youtube.com/embed/6GDCFa4Ikm0?autoplay=1&mute=1&loop=1&playlist=6GDCFa4Ikm0" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <!-- Contenido sobre el video -->
-    <div id="content">
-        <h1>Bienvenidos al Árbol Genealógico Familia Asprón</h1>
-    </div>
-
-    <!-- Botón para activar el audio -->
-    <button id="unmute-btn">🔊 Activar sonido</button>
-
-    <script>
-        document.getElementById("unmute-btn").addEventListener("click", function() {
-            var iframe = document.getElementById("bg-video");
-            iframe.src = "https://www.youtube.com/embed/6GDCFa4Ikm0?autoplay=1&loop=1&playlist=6GDCFa4Ikm0";
-            this.style.display = "none"; // Oculta el botón después de activarlo
-        });
-    </script>
-
-</body>
-</html>
+            border-
