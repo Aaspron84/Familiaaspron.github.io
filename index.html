@@ -8,11 +8,10 @@
         /* Estilos básicos para el video de fondo */
         #bg-video {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;  /* Reducción del tamaño del video */
-            height: 80%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             z-index: -1;
         }
@@ -20,13 +19,13 @@
         /* Estilos para el texto "Árbol Genealógico Familia Asprón" */
         h1 {
             position: absolute;
-            top: 10%;  /* Ajustado para que no tape el video */
+            top: 10%;  /* Posicionamiento ajustado */
             left: 50%;
             transform: translateX(-50%);
             font-size: 48px;
             color: white;
-            z-index: 1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Sombra para mejor visibilidad */
+            z-index: 1;  /* Asegura que esté por encima del video */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Sombra para mejorar la visibilidad */
         }
 
         /* Estilos para el botón "ENTRAR" */
@@ -37,16 +36,16 @@
             transform: translate(-50%, -50%);
             padding: 20px 40px;
             font-size: 24px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.6);  /* Transparencia */
             color: white;
             border: none;
             cursor: pointer;
             border-radius: 10px;
-            z-index: 2;
+            z-index: 2; /* Asegura que esté por encima del video y el texto */
         }
 
         #enter-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);  /* Efecto hover */
         }
 
         /* Estructura del árbol genealógico (ocultada inicialmente) */
@@ -61,17 +60,6 @@
             font-size: 36px;
             margin-bottom: 20px;
         }
-
-        /* Texto de crédito en la esquina inferior derecha */
-        #credit {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            font-size: 12px;
-            color: white;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            z-index: 3;
-        }
     </style>
 </head>
 <body>
@@ -85,4 +73,27 @@
     <!-- Botón "ENTRAR" -->
     <button id="enter-btn" onclick="entrar()">ENTRAR</button>
 
-    <!-- Estructur
+    <!-- Estructura del árbol genealógico (ocultada inicialmente) -->
+    <div id="family-tree">
+        <h2>Árbol Genealógico Familia Asprón</h2>
+        <p>Este es el árbol genealógico de nuestra familia...</p>
+        <!-- Aquí iría la estructura jerárquica del árbol -->
+    </div>
+
+    <script>
+        // Función que oculta el video y muestra el árbol genealógico al hacer clic en el botón "ENTRAR"
+        function entrar() {
+            document.getElementById("bg-video").style.display = "none";  // Oculta el video
+            document.getElementById("enter-btn").style.display = "none"; // Oculta el botón "ENTRAR"
+            document.getElementById("family-tree").style.display = "block"; // Muestra el árbol genealógico
+        }
+
+        // Activar el sonido automáticamente al cargar la página (en algunos navegadores)
+        window.onload = function() {
+            var video = document.getElementById("bg-video");
+            video.muted = false;  // Desactiva el mute para activar el sonido
+        }
+    </script>
+
+</body>
+</html>
