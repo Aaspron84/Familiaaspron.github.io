@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Matrimonio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        .fecha-roja {
+            color: red; /* Fecha en rojo */
+        }
+
+        .imagen-matrimonio {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            margin-top: 30px;
+            border: 10px solid #2c3e50; /* Marco grueso */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+            transition: transform 0.3s ease; /* Transición suave para el zoom */
+        }
+
+        .imagen-matrimonio.zoom {
+            transform: scale(1.5); /* Zoom de 1.5x */
+        }
+
+        footer {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <h1>REGISTRO DE MATRIMONIO ENTRE <strong>ANTONIO ASPRON PILAR</strong> Y <strong>EMILIA PEREZ CAMPOS</strong> EL <span class="fecha-roja">17 DE MAYO DE 1927</span> EN ACATLÁN DE PÉREZ FIGUEROA, OAXACA</h1>
+
+    <!-- Imagen centrada con marco bonito y zoom -->
+    <img class="imagen-matrimonio" src="https://i.imgur.com/TZMpCQF.jpeg" alt="Registro de Matrimonio" onclick="toggleZoom(this)">
+
+    <!-- Crédito -->
+    <footer>
+        Creado por Antonio Asprón Vera
+    </footer>
+
+    <!-- Script para el zoom -->
+    <script>
+        function toggleZoom(image) {
+            image.classList.toggle('zoom'); // Agrega o quita la clase 'zoom'
+        }
+    </script>
+
+</body>
+</html>
