@@ -85,33 +85,4 @@
     <!-- Botón "ENTRAR" -->
     <button id="enter-btn" onclick="entrar()">ENTRAR</button>
 
-    <!-- Estructura del árbol genealógico (ocultada inicialmente) -->
-    <div id="family-tree">
-        <h2>Árbol Genealógico Familia Asprón</h2>
-        <p>Este es el árbol genealógico de nuestra familia...</p>
-        <!-- Aquí iría la estructura jerárquica del árbol -->
-    </div>
-
-    <!-- Crédito en la esquina inferior derecha -->
-    <div id="credit">
-        Creado por Antonio Asprón Vera
-    </div>
-
-    <script>
-        // Función para ocultar el video y mostrar el árbol genealógico al hacer clic en "ENTRAR"
-        function entrar() {
-            // Ocultar el video y el botón
-            document.getElementById("bg-video").style.display = "none";
-            document.getElementById("enter-btn").style.display = "none";
-
-            // Mostrar el árbol genealógico
-            document.getElementById("family-tree").style.display = "block";
-
-            // Activar el sonido del video
-            var video = document.getElementById("bg-video");
-            video.src = "https://www.youtube.com/embed/XiXpjaJ6WS4?autoplay=1&mute=0&loop=1&playlist=XiXpjaJ6WS4"; // Desactiva mute
-        }
-    </script>
-
-</body>
-</html>
+    <!-- Estructur
