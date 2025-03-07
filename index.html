@@ -87,7 +87,7 @@
         Creado por Antonio Asprón Vera
     </div>
 
-    <!-- Botón "ENTRAR" -->
+    <!-- Botón "ENTRAR" que redirige a la página principal -->
     <button id="enter-btn" onclick="entrar()">ENTRAR</button>
 
     <!-- Estructura del árbol genealógico (ocultada inicialmente) -->
@@ -98,18 +98,9 @@
     </div>
 
     <script>
-        // Función para ocultar el video y mostrar el árbol genealógico al hacer clic en "ENTRAR"
+        // Función para redirigir a la página principal
         function entrar() {
-            // Ocultar el video y el botón
-            document.getElementById("bg-video").style.display = "none";
-            document.getElementById("enter-btn").style.display = "none";
-
-            // Mostrar el árbol genealógico
-            document.getElementById("family-tree").style.display = "block";
-
-            // Activar el sonido del video
-            var video = document.getElementById("bg-video");
-            video.src = "https://www.youtube.com/embed/XiXpjaJ6WS4?autoplay=1&mute=0&loop=1&playlist=XiXpjaJ6WS4"; // Desactiva mute
+            window.location.href = "pagina-principal.html";
         }
     </script>
 
