@@ -19,33 +19,45 @@
         /* Estilos para el texto "Árbol Genealógico Familia Asprón" */
         h1 {
             position: absolute;
-            top: 10%;  /* Posicionamiento ajustado */
+            top: 10%;
             left: 50%;
             transform: translateX(-50%);
             font-size: 48px;
             color: white;
-            z-index: 1;  /* Asegura que esté por encima del video */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Sombra para mejorar la visibilidad */
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Sombra para mejor visibilidad */
+        }
+
+        /* Estilos para el crédito "Creado por Antonio Asprón Vera" */
+        #credit {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            z-index: 2;
         }
 
         /* Estilos para el botón "ENTRAR" */
         #enter-btn {
             position: absolute;
-            top: 50%;
+            bottom: 10%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
             padding: 20px 40px;
             font-size: 24px;
-            background-color: rgba(0, 0, 0, 0.6);  /* Transparencia */
+            background-color: rgba(0, 0, 0, 0.6);
             color: white;
             border: none;
             cursor: pointer;
             border-radius: 10px;
-            z-index: 2; /* Asegura que esté por encima del video y el texto */
+            z-index: 2;
         }
 
         #enter-btn:hover {
-            background-color: rgba(0, 0, 0, 0.8);  /* Efecto hover */
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         /* Estructura del árbol genealógico (ocultada inicialmente) */
@@ -70,6 +82,11 @@
     <!-- Título de la página -->
     <h1>Árbol Genealógico Familia Asprón</h1>
 
+    <!-- Crédito "Creado por Antonio Asprón Vera" -->
+    <div id="credit">
+        Creado por Antonio Asprón Vera
+    </div>
+
     <!-- Botón "ENTRAR" -->
     <button id="enter-btn" onclick="entrar()">ENTRAR</button>
 
@@ -81,17 +98,18 @@
     </div>
 
     <script>
-        // Función que oculta el video y muestra el árbol genealógico al hacer clic en el botón "ENTRAR"
+        // Función para ocultar el video y mostrar el árbol genealógico al hacer clic en "ENTRAR"
         function entrar() {
-            document.getElementById("bg-video").style.display = "none";  // Oculta el video
-            document.getElementById("enter-btn").style.display = "none"; // Oculta el botón "ENTRAR"
-            document.getElementById("family-tree").style.display = "block"; // Muestra el árbol genealógico
-        }
+            // Ocultar el video y el botón
+            document.getElementById("bg-video").style.display = "none";
+            document.getElementById("enter-btn").style.display = "none";
 
-        // Activar el sonido automáticamente al cargar la página (en algunos navegadores)
-        window.onload = function() {
+            // Mostrar el árbol genealógico
+            document.getElementById("family-tree").style.display = "block";
+
+            // Activar el sonido del video
             var video = document.getElementById("bg-video");
-            video.muted = false;  // Desactiva el mute para activar el sonido
+            video.src = "https://www.youtube.com/embed/XiXpjaJ6WS4?autoplay=1&mute=0&loop=1&playlist=XiXpjaJ6WS4"; // Desactiva mute
         }
     </script>
 
