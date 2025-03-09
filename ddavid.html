@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagrama de Árbol con Imágenes</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Contenedor principal */
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Nodos del árbol */
+        .node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 40px 20px;
+            position: relative;
+        }
+
+        /* Círculo contenedor de imagen */
+        .node-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #4CAF50;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .node-img:hover {
+            transform: scale(1.1);
+        }
+
+        .node-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Título de la imagen */
+        .node-title {
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            max-width: 150px;
+        }
+
+        /* Líneas conectores */
+        .node::before, .node::after {
+            content: '';
+            position: absolute;
+            background: #4CAF50;
+        }
+
+        /* Conector vertical */
+        .node::before {
+            width: 2px;
+            height: 40px;
+            top: -40px;
+        }
+
+        /* Conector horizontal */
+        .node::after {
+            height: 2px;
+            width: 40px;
+            top: 20px;
+        }
+
+        /* Ajustes para niveles hijos */
+        .children {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Nodo raíz */
+        .root .node-img {
+            width: 150px;
+            height: 150px;
+            border-color: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="tree">
+        <!-- Nivel 1 - Raíz -->
+        <div class="node root">
+            <div class="node-img">
+                <img src="https://via.placeholder.com/150" alt="Imagen 1">
+            </div>
+            <div class="node-title">Nodo Raíz</div>
+            
+            <!-- Nivel 2 - Hijos -->
+            <div class="children">
+                <div class="node">
+                    <div class="node-img">
+                        <img src="https://via.placeholder.com/150" alt="Imagen 2">
+                    </div>
+                    <div class="node-title">Hijo 1</div>
+                    
+                    <!-- Nivel 3 - Nietos -->
+                    <div class="children">
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/150" alt="Imagen 4">
+                            </div>
+                            <div class="node-title">Nieto 1</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/150" alt="Imagen 5">
+                            </div>
+                            <div class="node-title">Nieto 2</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="node">
+                    <div class="node-img">
+                        <img src="https://via.placeholder.com/150" alt="Imagen 3">
+                    </div>
+                    <div class="node-title">Hijo 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
