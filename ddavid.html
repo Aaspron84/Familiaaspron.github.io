@@ -5,7 +5,7 @@
     <style>
         /* Estilos generales */
         body {
-            background: #FFF8E1; /* Fondo amarillo clarito */
+            background: #F5F5DC; /* Fondo beige */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -27,7 +27,7 @@
             display: flex;
             flex-direction: row; /* Diseño horizontal */
             align-items: flex-start;
-            min-width: 2000px; /* Ancho mínimo para evitar cortes */
+            min-width: 2500px; /* Ancho mínimo para evitar cortes */
         }
 
         /* Nodos del árbol */
@@ -41,11 +41,11 @@
 
         /* Círculo contenedor de imagen */
         .node-img {
-            width: 120px; /* Tamaño estándar */
-            height: 120px;
+            width: 240px; /* Doble de grande */
+            height: 240px;
             border-radius: 50%;
             overflow: hidden;
-            border: 3px solid #4CAF50;
+            border: 5px solid; /* Grosor del borde */
             background: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s;
@@ -63,6 +63,9 @@
         }
 
         /* Colores para identificar roles */
+        .node-img.padre {
+            border-color: #000000; /* Negro para padres */
+        }
         .node-img.hijo {
             border-color: #FF0000; /* Rojo para hijos */
         }
@@ -75,8 +78,8 @@
 
         /* Círculo más grande para David */
         .node-img.large {
-            width: 180px; /* Triple de grande */
-            height: 180px;
+            width: 360px; /* Triple de grande */
+            height: 360px;
             border-color: #4CAF50; /* Verde para David */
         }
 
@@ -86,7 +89,7 @@
             color: #333;
             font-weight: bold;
             text-align: center;
-            max-width: 150px;
+            max-width: 200px;
         }
 
         /* Líneas conectores */
@@ -107,7 +110,7 @@
         .node::after {
             height: 2px;
             width: 40px;
-            top: 60px; /* Ajuste para círculos más grandes */
+            top: 120px; /* Ajuste para círculos más grandes */
         }
 
         /* Ajustes para niveles hijos */
@@ -155,13 +158,13 @@
             <!-- Nivel 2 - Padres -->
             <div class="children">
                 <div class="node">
-                    <div class="node-img hijo">
+                    <div class="node-img padre">
                         <img src="https://i.imgur.com/def456.jpg" alt="Antonio Asprón Contreras"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
                     <div class="node-title">Antonio Asprón Contreras</div>
                 </div>
                 <div class="node">
-                    <div class="node-img hijo">
+                    <div class="node-img padre">
                         <img src="https://i.imgur.com/ghi789.jpg" alt="Ventura Vera Real"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
                     <div class="node-title">Ventura Vera Real</div>
@@ -170,15 +173,7 @@
             
             <!-- Nivel 3 - Hijos -->
             <div class="children">
-                <!-- Hijo 1 - Antonio Asprón Vera -->
-                <div class="node">
-                    <div class="node-img hijo">
-                        <img src="https://i.imgur.com/jkl012.jpg" alt="Antonio Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
-                    </div>
-                    <div class="node-title">Antonio Asprón Vera (Yo) - Soltero</div>
-                </div>
-                
-                <!-- Hijo 2 - Gabriela Asprón Vera -->
+                <!-- Hijo 1 - Gabriela Asprón Vera -->
                 <div class="node">
                     <div class="node-img hijo">
                         <img src="https://i.imgur.com/mno345.jpg" alt="Gabriela Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
@@ -216,7 +211,7 @@
                     </div>
                 </div>
                 
-                <!-- Hijo 3 - Pedro Asprón Vera -->
+                <!-- Hijo 2 - Pedro Asprón Vera -->
                 <div class="node">
                     <div class="node-img hijo">
                         <img src="https://i.imgur.com/cde789.jpg" alt="Pedro Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
@@ -254,7 +249,7 @@
                     </div>
                 </div>
                 
-                <!-- Hijo 4 - Ana Delia Asprón Vera -->
+                <!-- Hijo 3 - Ana Delia Asprón Vera -->
                 <div class="node">
                     <div class="node-img hijo">
                         <img src="https://i.imgur.com/rst234.jpg" alt="Ana Delia Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
@@ -286,7 +281,7 @@
                     </div>
                 </div>
                 
-                <!-- Hijo 5 - Lidia Asprón Vera -->
+                <!-- Hijo 4 - Lidia Asprón Vera -->
                 <div class="node">
                     <div class="node-img hijo">
                         <img src="https://i.imgur.com/456def.jpg" alt="Lidia Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
@@ -334,6 +329,14 @@
                             <div class="node-title">Lian Palma Asprón</div>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Hijo 5 - Antonio Asprón Vera -->
+                <div class="node">
+                    <div class="node-img hijo">
+                        <img src="https://i.imgur.com/jkl012.jpg" alt="Antonio Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
+                    </div>
+                    <div class="node-title">Antonio Asprón Vera (Yo) - Soltero</div>
                 </div>
             </div>
         </div>
