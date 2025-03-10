@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Diagrama de Árbol con Imágenes</title>
+    <title>Descendencia de David Apolinar Asprón Pérez</title>
     <style>
         /* Estilos generales */
         body {
             background: #f0f0f0;
             font-family: Arial, sans-serif;
             padding: 20px;
+            text-align: center;
+        }
+
+        /* Encabezado */
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         /* Contenedor principal */
@@ -28,14 +38,15 @@
 
         /* Círculo contenedor de imagen */
         .node-img {
-            width: 120px;
-            height: 120px;
+            width: 240px; /* Doble de grande */
+            height: 240px;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid #4CAF50;
             background: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            cursor: pointer;
         }
 
         .node-img:hover {
@@ -48,13 +59,20 @@
             object-fit: cover;
         }
 
+        /* Círculo más grande para David */
+        .node-img.large {
+            width: 360px; /* Triple de grande */
+            height: 360px;
+            border-color: #2196F3;
+        }
+
         /* Título de la imagen */
         .node-title {
             margin-top: 10px;
             color: #333;
             font-weight: bold;
             text-align: center;
-            max-width: 150px;
+            max-width: 200px;
         }
 
         /* Líneas conectores */
@@ -75,7 +93,7 @@
         .node::after {
             height: 2px;
             width: 40px;
-            top: 20px;
+            top: 120px; /* Ajuste para círculos más grandes */
         }
 
         /* Ajustes para niveles hijos */
@@ -84,56 +102,205 @@
             justify-content: center;
         }
 
-        /* Nodo raíz */
-        .root .node-img {
-            width: 150px;
-            height: 150px;
-            border-color: #2196F3;
+        /* Botón final */
+        .button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            background: #2196F3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #1976D2;
+        }
+
+        /* Efecto de agrandar imagen al hacer clic */
+        .node-img.zoomed {
+            transform: scale(2.0);
+            z-index: 10;
         }
     </style>
 </head>
 <body>
+    <h1>DESCENDENCIA DE DAVID APOLINAR ASPRÓN PEREZ</h1>
     <div class="tree">
-        <!-- Nivel 1 - Raíz -->
-        <div class="node root">
-            <div class="node-img">
-                <img src="https://via.placeholder.com/150" alt="Imagen 1">
+        <!-- Nivel 1 - David Apolinar Asprón Pérez -->
+        <div class="node">
+            <div class="node-img large">
+                <img src="https://via.placeholder.com/360" alt="David Apolinar Asprón Pérez">
             </div>
-            <div class="node-title">Nodo Raíz</div>
+            <div class="node-title">David Apolinar Asprón Pérez</div>
             
-            <!-- Nivel 2 - Hijos -->
+            <!-- Nivel 2 - Padres -->
             <div class="children">
                 <div class="node">
                     <div class="node-img">
-                        <img src="https://via.placeholder.com/150" alt="Imagen 2">
+                        <img src="https://via.placeholder.com/240" alt="Antonio Asprón Contreras">
                     </div>
-                    <div class="node-title">Hijo 1</div>
+                    <div class="node-title">Antonio Asprón Contreras</div>
+                </div>
+                <div class="node">
+                    <div class="node-img">
+                        <img src="https://via.placeholder.com/240" alt="Ventura Vera Real">
+                    </div>
+                    <div class="node-title">Ventura Vera Real</div>
+                </div>
+            </div>
+            
+            <!-- Nivel 3 - Hijos -->
+            <div class="children">
+                <!-- Hijo 1 - Antonio Asprón Vera -->
+                <div class="node">
+                    <div class="node-img">
+                        <img src="https://via.placeholder.com/240" alt="Antonio Asprón Vera">
+                    </div>
+                    <div class="node-title">Antonio Asprón Vera (Yo) - Soltero</div>
+                </div>
+                
+                <!-- Hijo 2 - Gabriela Asprón Vera -->
+                <div class="node">
+                    <div class="node-img">
+                        <img src="https://via.placeholder.com/240" alt="Gabriela Asprón Vera">
+                    </div>
+                    <div class="node-title">Gabriela Asprón Vera con José Antonio Fernández González</div>
                     
-                    <!-- Nivel 3 - Nietos -->
+                    <!-- Nivel 4 - Nietos -->
                     <div class="children">
                         <div class="node">
                             <div class="node-img">
-                                <img src="https://via.placeholder.com/150" alt="Imagen 4">
+                                <img src="https://via.placeholder.com/240" alt="Henry Fernández Asprón">
                             </div>
-                            <div class="node-title">Nieto 1</div>
+                            <div class="node-title">Henry Fernández Asprón</div>
                         </div>
                         <div class="node">
                             <div class="node-img">
-                                <img src="https://via.placeholder.com/150" alt="Imagen 5">
+                                <img src="https://via.placeholder.com/240" alt="Christian Fernández Asprón">
                             </div>
-                            <div class="node-title">Nieto 2</div>
+                            <div class="node-title">Christian Fernández Asprón</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Ximena Fernández Asprón">
+                            </div>
+                            <div class="node-title">Ximena Fernández Asprón</div>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Hijo 3 - Pedro Asprón Vera -->
                 <div class="node">
                     <div class="node-img">
-                        <img src="https://via.placeholder.com/150" alt="Imagen 3">
+                        <img src="https://via.placeholder.com/240" alt="Pedro Asprón Vera">
                     </div>
-                    <div class="node-title">Hijo 2</div>
+                    <div class="node-title">Pedro Asprón Vera con Dora</div>
+                    
+                    <!-- Nivel 4 - Nietos -->
+                    <div class="children">
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Noé Asprón">
+                            </div>
+                            <div class="node-title">Noé Asprón</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Paola Asprón">
+                            </div>
+                            <div class="node-title">Paola Asprón</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Daniel Asprón">
+                            </div>
+                            <div class="node-title">Daniel Asprón</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hijo 4 - Ana Delia Asprón Vera -->
+                <div class="node">
+                    <div class="node-img">
+                        <img src="https://via.placeholder.com/240" alt="Ana Delia Asprón Vera">
+                    </div>
+                    <div class="node-title">Ana Delia Asprón Vera con Hugo Rueda Riande</div>
+                    
+                    <!-- Nivel 4 - Nietos -->
+                    <div class="children">
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Victor Nahum Rueda Asprón">
+                            </div>
+                            <div class="node-title">Victor Nahum Rueda Asprón</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Valeria Rueda Asprón">
+                            </div>
+                            <div class="node-title">Valeria Rueda Asprón</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hijo 5 - Lidia Asprón Vera -->
+                <div class="node">
+                    <div class="node-img">
+                        <img src="https://via.placeholder.com/240" alt="Lidia Asprón Vera">
+                    </div>
+                    <div class="node-title">Lidia Asprón Vera con Daniel Abreu Delgado</div>
+                    
+                    <!-- Nivel 4 - Nietos -->
+                    <div class="children">
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Daniela Abreu Asprón">
+                            </div>
+                            <div class="node-title">Daniela Abreu Asprón</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-img">
+                                <img src="https://via.placeholder.com/240" alt="Dariane Abreu Asprón">
+                            </div>
+                            <div class="node-title">Dariane Abreu Asprón</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Segunda pareja de Lidia -->
+                    <div class="node">
+                        <div class="node-img">
+                            <img src="https://via.placeholder.com/240" alt="Gustavo Palma">
+                        </div>
+                        <div class="node-title">Lidia Asprón Vera con Gustavo Palma</div>
+                        
+                        <!-- Nivel 4 - Nieto -->
+                        <div class="children">
+                            <div class="node">
+                                <div class="node-img">
+                                    <img src="https://via.placeholder.com/240" alt="Lian Palma Asprón">
+                                </div>
+                                <div class="node-title">Lian Palma Asprón</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Botón final -->
+    <a href="maluisa.html" class="button">MARIA LUISA ASPRÓN</a>
+
+    <!-- Script para agrandar imágenes al hacer clic -->
+    <script>
+        const images = document.querySelectorAll('.node-img');
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                img.classList.toggle('zoomed');
+            });
+        });
+    </script>
 </body>
 </html>
