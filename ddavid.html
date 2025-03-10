@@ -5,7 +5,7 @@
     <style>
         /* Estilos generales */
         body {
-            background: #f0f0f0;
+            background: #FFF8E1; /* Fondo amarillo clarito */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -41,8 +41,8 @@
 
         /* Círculo contenedor de imagen */
         .node-img {
-            width: 240px; /* Doble de grande */
-            height: 240px;
+            width: 120px; /* Tamaño estándar */
+            height: 120px;
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid #4CAF50;
@@ -62,11 +62,22 @@
             object-fit: cover;
         }
 
+        /* Colores para identificar roles */
+        .node-img.hijo {
+            border-color: #FF0000; /* Rojo para hijos */
+        }
+        .node-img.pareja {
+            border-color: #2196F3; /* Azul para parejas */
+        }
+        .node-img.nieto {
+            border-color: #FFD700; /* Amarillo para nietos */
+        }
+
         /* Círculo más grande para David */
         .node-img.large {
-            width: 360px; /* Triple de grande */
-            height: 360px;
-            border-color: #2196F3;
+            width: 180px; /* Triple de grande */
+            height: 180px;
+            border-color: #4CAF50; /* Verde para David */
         }
 
         /* Título de la imagen */
@@ -75,7 +86,7 @@
             color: #333;
             font-weight: bold;
             text-align: center;
-            max-width: 200px;
+            max-width: 150px;
         }
 
         /* Líneas conectores */
@@ -96,7 +107,7 @@
         .node::after {
             height: 2px;
             width: 40px;
-            top: 120px; /* Ajuste para círculos más grandes */
+            top: 60px; /* Ajuste para círculos más grandes */
         }
 
         /* Ajustes para niveles hijos */
@@ -144,13 +155,13 @@
             <!-- Nivel 2 - Padres -->
             <div class="children">
                 <div class="node">
-                    <div class="node-img">
+                    <div class="node-img hijo">
                         <img src="https://i.imgur.com/def456.jpg" alt="Antonio Asprón Contreras"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
                     <div class="node-title">Antonio Asprón Contreras</div>
                 </div>
                 <div class="node">
-                    <div class="node-img">
+                    <div class="node-img hijo">
                         <img src="https://i.imgur.com/ghi789.jpg" alt="Ventura Vera Real"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
                     <div class="node-title">Ventura Vera Real</div>
@@ -161,7 +172,7 @@
             <div class="children">
                 <!-- Hijo 1 - Antonio Asprón Vera -->
                 <div class="node">
-                    <div class="node-img">
+                    <div class="node-img hijo">
                         <img src="https://i.imgur.com/jkl012.jpg" alt="Antonio Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
                     <div class="node-title">Antonio Asprón Vera (Yo) - Soltero</div>
@@ -169,28 +180,36 @@
                 
                 <!-- Hijo 2 - Gabriela Asprón Vera -->
                 <div class="node">
-                    <div class="node-img">
+                    <div class="node-img hijo">
                         <img src="https://i.imgur.com/mno345.jpg" alt="Gabriela Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
-                    <div class="node-title">Gabriela Asprón Vera con José Antonio Fernández González</div>
+                    <div class="node-title">Gabriela Asprón Vera</div>
+                    
+                    <!-- Pareja de Gabriela -->
+                    <div class="node">
+                        <div class="node-img pareja">
+                            <img src="https://i.imgur.com/pqr678.jpg" alt="José Antonio Fernández"> <!-- Reemplaza con tu enlace de Imgur -->
+                        </div>
+                        <div class="node-title">José Antonio Fernández</div>
+                    </div>
                     
                     <!-- Nivel 4 - Nietos -->
                     <div class="children">
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/pqr678.jpg" alt="Henry Fernández Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/stu901.jpg" alt="Henry Fernández Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Henry Fernández Asprón</div>
                         </div>
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/stu901.jpg" alt="Christian Fernández Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/vwx234.jpg" alt="Christian Fernández Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Christian Fernández Asprón</div>
                         </div>
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/vwx234.jpg" alt="Ximena Fernández Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/yzab56.jpg" alt="Ximena Fernández Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Ximena Fernández Asprón</div>
                         </div>
@@ -199,28 +218,36 @@
                 
                 <!-- Hijo 3 - Pedro Asprón Vera -->
                 <div class="node">
-                    <div class="node-img">
-                        <img src="https://i.imgur.com/yzab56.jpg" alt="Pedro Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
+                    <div class="node-img hijo">
+                        <img src="https://i.imgur.com/cde789.jpg" alt="Pedro Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
-                    <div class="node-title">Pedro Asprón Vera con Dora</div>
+                    <div class="node-title">Pedro Asprón Vera</div>
+                    
+                    <!-- Pareja de Pedro -->
+                    <div class="node">
+                        <div class="node-img pareja">
+                            <img src="https://i.imgur.com/fgh012.jpg" alt="Dora"> <!-- Reemplaza con tu enlace de Imgur -->
+                        </div>
+                        <div class="node-title">Dora</div>
+                    </div>
                     
                     <!-- Nivel 4 - Nietos -->
                     <div class="children">
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/cde789.jpg" alt="Noé Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/ijk345.jpg" alt="Noé Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Noé Asprón</div>
                         </div>
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/fgh012.jpg" alt="Paola Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/lmn678.jpg" alt="Paola Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Paola Asprón</div>
                         </div>
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/ijk345.jpg" alt="Daniel Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/opq901.jpg" alt="Daniel Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Daniel Asprón</div>
                         </div>
@@ -229,22 +256,30 @@
                 
                 <!-- Hijo 4 - Ana Delia Asprón Vera -->
                 <div class="node">
-                    <div class="node-img">
-                        <img src="https://i.imgur.com/lmn678.jpg" alt="Ana Delia Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
+                    <div class="node-img hijo">
+                        <img src="https://i.imgur.com/rst234.jpg" alt="Ana Delia Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
-                    <div class="node-title">Ana Delia Asprón Vera con Hugo Rueda Riande</div>
+                    <div class="node-title">Ana Delia Asprón Vera</div>
+                    
+                    <!-- Pareja de Ana Delia -->
+                    <div class="node">
+                        <div class="node-img pareja">
+                            <img src="https://i.imgur.com/uvw567.jpg" alt="Hugo Rueda"> <!-- Reemplaza con tu enlace de Imgur -->
+                        </div>
+                        <div class="node-title">Hugo Rueda</div>
+                    </div>
                     
                     <!-- Nivel 4 - Nietos -->
                     <div class="children">
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/opq901.jpg" alt="Victor Nahum Rueda Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/xyz890.jpg" alt="Victor Nahum Rueda Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Victor Nahum Rueda Asprón</div>
                         </div>
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/rst234.jpg" alt="Valeria Rueda Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/123abc.jpg" alt="Valeria Rueda Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Valeria Rueda Asprón</div>
                         </div>
@@ -253,42 +288,50 @@
                 
                 <!-- Hijo 5 - Lidia Asprón Vera -->
                 <div class="node">
-                    <div class="node-img">
-                        <img src="https://i.imgur.com/uvw567.jpg" alt="Lidia Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
+                    <div class="node-img hijo">
+                        <img src="https://i.imgur.com/456def.jpg" alt="Lidia Asprón Vera"> <!-- Reemplaza con tu enlace de Imgur -->
                     </div>
-                    <div class="node-title">Lidia Asprón Vera con Daniel Abreu Delgado</div>
+                    <div class="node-title">Lidia Asprón Vera</div>
                     
-                    <!-- Nivel 4 - Nietos -->
+                    <!-- Pareja 1 de Lidia -->
+                    <div class="node">
+                        <div class="node-img pareja">
+                            <img src="https://i.imgur.com/789ghi.jpg" alt="Daniel Abreu"> <!-- Reemplaza con tu enlace de Imgur -->
+                        </div>
+                        <div class="node-title">Daniel Abreu</div>
+                    </div>
+                    
+                    <!-- Nivel 4 - Nietos con Daniel Abreu -->
                     <div class="children">
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/xyz890.jpg" alt="Daniela Abreu Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/012jkl.jpg" alt="Daniela Abreu Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Daniela Abreu Asprón</div>
                         </div>
                         <div class="node">
-                            <div class="node-img">
-                                <img src="https://i.imgur.com/123abc.jpg" alt="Dariane Abreu Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/345mno.jpg" alt="Dariane Abreu Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
                             <div class="node-title">Dariane Abreu Asprón</div>
                         </div>
                     </div>
                     
-                    <!-- Segunda pareja de Lidia -->
+                    <!-- Pareja 2 de Lidia -->
                     <div class="node">
-                        <div class="node-img">
-                            <img src="https://i.imgur.com/456def.jpg" alt="Gustavo Palma"> <!-- Reemplaza con tu enlace de Imgur -->
+                        <div class="node-img pareja">
+                            <img src="https://i.imgur.com/678pqr.jpg" alt="Gustavo Palma"> <!-- Reemplaza con tu enlace de Imgur -->
                         </div>
-                        <div class="node-title">Lidia Asprón Vera con Gustavo Palma</div>
-                        
-                        <!-- Nivel 4 - Nieto -->
-                        <div class="children">
-                            <div class="node">
-                                <div class="node-img">
-                                    <img src="https://i.imgur.com/789ghi.jpg" alt="Lian Palma Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
-                                </div>
-                                <div class="node-title">Lian Palma Asprón</div>
+                        <div class="node-title">Gustavo Palma</div>
+                    </div>
+                    
+                    <!-- Nivel 4 - Nieto con Gustavo Palma -->
+                    <div class="children">
+                        <div class="node">
+                            <div class="node-img nieto">
+                                <img src="https://i.imgur.com/901stu.jpg" alt="Lian Palma Asprón"> <!-- Reemplaza con tu enlace de Imgur -->
                             </div>
+                            <div class="node-title">Lian Palma Asprón</div>
                         </div>
                     </div>
                 </div>
